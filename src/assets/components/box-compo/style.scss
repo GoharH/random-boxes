@@ -1,0 +1,42 @@
+@import '../../style/index.scss';
+.number-box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid $blue-200;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    p {
+        font-size: 40px;
+        color: $blue-200;
+    }
+}
+
+.close-btn {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    .line1,
+    .line2,
+    .line3 {
+        width: 20px;
+        height: 2px;
+        background-color: $blue-200;
+        margin: 2px 0;
+    }
+    .line1 {
+        transform: rotate(-45deg) translate(2px, 5px);
+    }
+    .line2 {
+        opacity: 0;
+    }
+    .line3 {
+        transform: rotate(45deg) translate(0px, -8px);
+    }
+}
