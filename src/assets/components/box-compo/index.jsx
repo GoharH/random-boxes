@@ -14,7 +14,10 @@ class BoxComp extends React.Component {
         this.setState({ openModal: false })
 
     }
-
+    handleDeleteBox = () => {
+        this.props.deleteBox()
+        this.closeModal()
+    }
 
     render() {
         return <>
@@ -26,7 +29,7 @@ class BoxComp extends React.Component {
                 </div>
                 <p>{this.props.vazgen}</p>
             </div>
-            {this.state.openModal ? <ModalBox closeModal={this.closeModal} deleteBox={this.props.deleteBox} /> : null}
+            {this.state.openModal ? <ModalBox closeModal={this.closeModal} deleteBox={this.handleDeleteBox} /> : null}
         </>
 
     }

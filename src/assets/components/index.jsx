@@ -44,7 +44,7 @@ class BoxPage extends React.Component {
             <div className="body-part">
                 <div className="scroll-div">
                     {this.state.randomNumberList.map((item, index) => {
-                        return <BoxComp vazgen={item} key={index} index={index} deleteBox={this.deleteBox} />
+                        return <BoxComp vazgen={item} key={index} index={index} deleteBox={() => this.deleteBox(index)} />
                     })}
                 </div>
                 <div className="text-part">

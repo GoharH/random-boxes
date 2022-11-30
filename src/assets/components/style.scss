@@ -37,7 +37,8 @@ header {
 
 .scroll-div {
     width: 60%;
-    height: 350px;
+    // height: calc(100vh - 80px);
+    height: 400px;
     padding: 20px 10px;
     display: flex;
     justify-content: center;
